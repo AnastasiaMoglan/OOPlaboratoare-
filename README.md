@@ -1,57 +1,69 @@
-# OOPlaboratoare-
-laborator 1 
-# Simple Library Management System
+# Sistem de Gestionare a Bibliotecii
 
-This Python project features a basic library management system with two classes: `Book` and `Library`.
+## Introducere
 
-## Files
+Acesta este un simplu **Sistem de Gestionare a Bibliotecii** scris în Python. Îți permite să adaugi cărți, să le elimini folosind ISBN-ul și să afișezi toate cărțile din bibliotecă. Este perfect pentru a gestiona o colecție personală mică sau ca un proiect de programare de bază pentru a învăța Python.
 
-- **`book.py`**: Defines the `Book` class with attributes for title, author, and ISBN.
-- **`library.py`**: Defines the `Library` class for managing books—adding, removing, and listing them.
+## Funcționalități
 
-## Classes
+1. **Adaugă carte**: Adaugă o carte introducând titlul, autorul și ISBN-ul.
+2. **Elimină carte**: Elimină o carte din bibliotecă folosind ISBN-ul său.
+3. **Afișează cărți**: Vizualizează toate cărțile disponibile în bibliotecă.
+4. **Ieșire**: Ieși în siguranță din program.
 
-### Book
+## Cum să folosești
 
-Represents a book with:
-- **`title`**: The book's name.
-- **`author`**: The book's author.
-- **`isbn`**: A unique identifier.
+### Cerințe preliminare
 
-Methods:
-- **`__init__`**: Creates a new book.
-- **`__str__`**: Returns book details as a string.
+- **Python 3.x** instalat pe sistemul tău.
 
-### Library
+### Rularea Programului
 
-Manages a collection of books.
+1. **Descarcă codul** sau clonează repository-ul:
+   ```bash
+   git clone https://github.com/your-repo/library-management-system.git
+   ```
 
-Methods:
-- **`__init__`**: Initializes an empty library.
-- **`add_book`**: Adds a book.
-- **`remove_book`**: Removes a book by ISBN.
-- **`display_books`**: Lists all books.
+2. **Navighează la directorul proiectului**:
+   ```bash
+   cd library-management-system
+   ```
 
-## Usage Example
+3. **Rulează scriptul Python**:
+   ```bash
+   python library_management_system.py
+   ```
 
-```python
-from book import Book
-from library import Library
+4. **Urmărește meniul** pentru a adăuga, elimina sau afișa cărți:
+   ```
+   -|- Meniul Bibliotecii -|-
+   1. Adaugă carte
+   2. Elimină carte după ISBN
+   3. Afișează toate cărțile
+   0. Ieșire
+   ```
 
-library = Library()
-book1 = Book("1984", "George Orwell", "1234567890")
-book2 = Book("Pride and Prejudice", "Jane Austen", "0987654321")
+### Exemplu de Utilizare
 
-library.add_book(book1)
-library.add_book(book2)
+#### Adăugarea unei Cărți:
+```
+Introduceți titlul cărții: To Kill a Mockingbird
+Introduceți autorul cărții: Harper Lee
+Introduceți ISBN-ul cărții: 9780061120084
+Carte adăugată: To Kill a Mockingbird
+```
 
-print("Books in the library:")
-library.display_books()
+#### Eliminarea unei Cărți:
+```
+Introduceți ISBN-ul cărții de eliminat: 9780061120084
+Cartea cu ISBN 9780061120084 a fost eliminată.
+```
 
-if library.remove_book("1234567890"):
-    print("\nBook removed.")
-else:
-    print("\nBook not found.")
+#### Afișarea Tuturor Cărților:
+```
+Cărțile din bibliotecă:
+Carte: 1984, Autor: George Orwell, ISBN: 9780451524935
+Carte: The Great Gatsby, Autor: F. Scott Fitzgerald, ISBN: 9780743273565
+```
 
-print("\nBooks after removal:")
-library.display_books()
+---
